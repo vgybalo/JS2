@@ -81,7 +81,7 @@ console.log(point.style.left);
 console.log(number_y);
 
 
-let margin_top = top_square2_number - bottom_square1_number;
+let margin_top =  bottom_square1_number - top_square2_number;
 
 
 
