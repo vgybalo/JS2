@@ -1,142 +1,27 @@
-.wrapper {
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
+.square1 {
+    width: 200px;
+    height: 200px;
     border: 1px solid #333;
+    margin: 20px;
 }
-.crossroad-element {
-    width: 198px;
-    height: 198px;
-    display: block;
-    float: left;
-    border: 1px dashed #333;
-    position: relative;
-}
-    .roadside1 {
-         width: 160px;
-         height: 160px;
-         position: absolute;
-         top:0;
-         left: 0;
-         border: 1px solid #333;
-         z-index: 2;
-     }
-.roadside2 {
-    width: 160px;
-    height: 160px;
-    position: absolute;
-    top:0;
-    right: 0;
-    border: 1px solid #333;
-    z-index: 2;
-}
-.roadside3 {
-    width: 160px;
-    height: 160px;
-    position: absolute;
-    bottom:0;
-    left: 0;
-    border: 1px solid #333;
-    z-index: 2;
-}
-.roadside4 {
-    width: 160px;
-    height: 160px;
-    position: absolute;
-    bottom:0;
-    right: 0;
-    border: 1px solid #333;
-    z-index: 2;
-}
-.roadlight_vertical {
-     height: 56px;
-     width: 30px;
-     background-color: #777;
-    position: absolute;
 
- }
-            .roadlight_vertical_right {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-            }
-            .roadlight_vertical_left {
-                position: absolute;
-                top: 0;
-                right: 0;
-            }
-    .roadlight_horisontal {
-        height: 56px;
-        width: 30px;
-        background-color: #777;
-        transform:rotate(90deg);
-    }
-        .roadlight_horisontal_right {
-            position: absolute;
-            bottom: -13px;
-            right: 13px;
-        }
-        .roadlight_horisontal_left {
-            position: absolute;
-            top: -13px;
-            left: 13px;
-        }
-
-    .red-light-horisontal {
-    width: 28px;
-    height: 28px;
-     border-radius: 50%;
-        background-color: red;
-    }
-    .green-light-horisontal {
-        width: 28px;
-        height: 28px;
-        border-radius: 50%;
-        background-color: green;
-    }
-    .red-light-vertical {
-        width: 28px;
-        height: 28px;
-        border-radius: 50%;
-        background-color: red;
-    }
-    .green-light-vertical {
-        width: 28px;
-        height: 28px;
-        border-radius: 50%;
-        background-color: green;
-    }
-.black-light {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background-color: #777;
-
+.square2 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #333;
+    margin: 20px;
 }
-.button {
-    width: 60px;
-    height: 60px;
+.point{
+    width: 3px;
+    height: 3px;
+    background-color: #000000;
     position: absolute;
-    bottom: 5px;
-    right: 5px;
-    border-radius: 50%;
-    background-color: #777777;
-    box-shadow: 2px 2px #333333;
 }
-.vertical-road {
-     position: relative;
-     height: 400px;
-     width: 78px;
-     left: 161px;
-     z-index: 3;
-     background-color: red;
- }
-.horisontal-road {
-    position: relative;
-    height: 78px;
-    width: 400px;
-    bottom: 241px;
-    left: 0;
-    z-index: 3;
-    background-color: green;
+.point2{
+    width: 3px;
+    height: 3px;
+    background-color: #000000;
+    position: absolute;
 }
+
+
