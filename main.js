@@ -25,7 +25,7 @@ window.addEventListener('mousemove', function  (e) {
         point.style.left = (number_x + delta_left) + 'px';
 
         //2nd point navigation
-        point2.style.bottom = (number_y /*+ delta_top*/ + delta_right.bottom /*- bottom_square2_number /*- margin_top*/) + 'px';
+        point2.style.bottom = (number_y + delta_top + delta_right.bottom /*- bottom_square2_number*/ + margin_top) + 'px';
         point2.style.right = (number_x + delta_left + delta_right.right - right_square2_number) + 'px';
         console.log(point2.style.bottom);
         console.log(point2.style.right);
