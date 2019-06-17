@@ -26,23 +26,24 @@ let delta_left = right_square1 - left_square1;
 
 
 function move (e) {
-    mouse_button_press = e.button;
-    coord_x = e.pageX;
-    coord_y = e.pageY;
+    e.target.addEventListener('mousemove', function () {
+        coord_x = e.pageX;
+        coord_y = e.pageY;
 
-   if (coord_x >= left_square_big && coord_x <= (right_square_big - delta_left) &&
-       coord_y >= top_square_big && coord_y <= (bottom_square_big - delta_top)){
+           if (coord_x >= left_square_big && coord_x <= (right_square_big - delta_left) &&
+               coord_y >= top_square_big && coord_y <= (bottom_square_big - delta_top)){
 
-        square1.style.top = (coord_y - delta_top/2 ) + 'px';
-        square1.style.left = (coord_x - delta_left/2 ) + 'px';}
+                square1.style.top = (coord_y - delta_top/2 ) + 'px';
+                square1.style.left = (coord_x - delta_left/2 ) + 'px';}
 
-console.log(coord_x);
-console.log(coord_y);
-    console.log( square1.style.top);
-    console.log(square1.style.left);
+        console.log(coord_x);
+        console.log(coord_y);
+        console.log( square1.style.top);
+        console.log(square1.style.left);
+    });
 }
 
-square_big.addEventListener('mousemove', move );
+square1.addEventListener('mousedown', move );
 
 console.log(delta_top);
 console.log(delta_left);
