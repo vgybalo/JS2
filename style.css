@@ -1,10 +1,16 @@
 .square1 {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border: 1px solid #333;
     margin: 20px;
     position: absolute;
 }
 
-
-
+.square_big {
+    width: 800px;
+    height: 600px;
+    margin: 100px auto;
+    border: 1px solid #333;
+    margin: 20px;
+    position: absolute;
+}
