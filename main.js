@@ -27,11 +27,11 @@ let delta_left = right_square1 - left_square1;
 
 function move (e) {
     mouse_button_press = e.button;
-    coord_x = e.offsetX;
-    coord_y = e.offsetY;
+    coord_x = e.pageX;
+    coord_y = e.pageY;
 
-   if (left_square1 >= left_square_big && right_square1 <= right_square_big &&
-       top_square1 >= top_square_big && bottom_square1 <= bottom_square_big){
+   if (coord_x >= left_square_big && coord_x <= (right_square_big - delta_left) &&
+       coord_y >= top_square_big && coord_y <= (bottom_square_big - delta_top)){
 
         square1.style.top = (coord_y - delta_top/2 ) + 'px';
         square1.style.left = (coord_x - delta_left/2 ) + 'px';}
