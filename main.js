@@ -1,56 +1,61 @@
-let square1 = document.querySelector('.square1');
-let square_big = document.querySelector('.square_big');
-let coord_x = 0;
-let coord_y = 0;
-let mouse_button_press = 0;
-
-let coordinates_square1 = square1.getBoundingClientRect();
-let top_square1 = Number(coordinates_square1.top);
-let left_square1 =  Number(coordinates_square1.left);
-let bottom_square1 = Number(coordinates_square1.bottom);
-let right_square1 =  Number(coordinates_square1.right);
-
-let coordinates_square_big = square_big.getBoundingClientRect();
-let top_square_big = Number(coordinates_square_big.top);
-let bottom_square_big = Number(coordinates_square_big.bottom);
-let left_square_big =  Number(coordinates_square_big.left);
-let right_square_big =  Number(coordinates_square_big.right);
-
-let delta_top = bottom_square1 - top_square1;
-let delta_left = right_square1 - left_square1;
-
-/*square_big.addEventListener('mousedown', function() {
-    square_big.addEventListener('mouseover', move );
-    square_big.removeEventListener('mouseup', move);
-});*/
+let input1 = document.querySelector('#input1');
+let input2 = document.querySelector('#input2');
+let add_oper = document.querySelector('#addbutton');
+let minus_oper = document.querySelector('#minusbutton');
+let mult_oper = document.querySelector('#multbutton');
+let div_oper = document.querySelector('#divbutton');
+let calculate_oper = document.querySelector('#calculate');
+let output = document.querySelector('#output');
 
 
-function move (e) {
-    e.target.addEventListener('mousemove', function () {
-        coord_x = e.pageX;
-        coord_y = e.pageY;
+let number1 = null;
+let number2 = null;
+let result = null;
 
-           if (coord_x >= left_square_big && coord_x <= (right_square_big - delta_left) &&
-               coord_y >= top_square_big && coord_y <= (bottom_square_big - delta_top)){
-
-                square1.style.top = (coord_y - delta_top/2 ) + 'px';
-                square1.style.left = (coord_x - delta_left/2 ) + 'px';}
-
-        console.log(coord_x);
-        console.log(coord_y);
-        console.log( square1.style.top);
-        console.log(square1.style.left);
+input1.addEventListener('change', function () {
+    number1 = Number(input1.value);
+    console.log(number1);
     });
-}
-
-square1.addEventListener('mousedown', move );
-
-console.log(delta_top);
-console.log(delta_left);
+input2.addEventListener('change', function () {
+    number2 = Number(input2.value);
+    console.log(number2);
+});
 
 
 
 
 
+calculate = {
+     numb1 : number1,
+     numb2 : number2,
+    result : null,
+
+        add : function  () {
+        result = number1 + number2;
+        console.log(result);
+    },
+        minus : function  () {
+        result = number1 - number2;
+        console.log(result);
+    },
+        mult : function  () {
+        result = number1 * number2;
+        console.log(result);
+    },
+        devide : function  () {
+        result = number1 / number2;
+        console.log(result);
+    },
+        display : function  () {
+            input1.value = result;
+            input2.value = 0;
+    }
+
+};
 
 
+add_oper.addEventListener('click', calculate.add );
+minus_oper.addEventListener('click', calculate.minus );
+mult_oper.addEventListener('click', calculate.mult );
+div_oper.addEventListener('click', calculate.devide );
+calculate_oper.addEventListener('click',  calculate.display );
