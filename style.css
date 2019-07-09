@@ -1,6 +1,69 @@
-div {
-    margin: 5px;
+.battle_place {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: #ccc;
+    position: relative;
+    border-radius: 5px;
 }
-input {
-    margin-left: 5px;
+.left-column {
+    max-width: 150px;
+    max-height:150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.ship {
+    width: 180px;
+    height: 40px;
+    margin: 80px;
+}
+.rectangle_left {
+    width: 120px;
+    height: 60px;
+    background-color: #188;
+   float: left;
+}
+.triangle_left {
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-left: 60px solid #188;
+    border-bottom: 30px solid transparent;
+    margin-left: 120px;
+}
+.result-left {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    color: #555;
+}
+.right-column {
+    max-width: 200px;
+    max-height: 200px;
+    position: absolute;
+    top: 0;
+    right: 200px;
+    }
+.rectangle_right {
+    width: 120px;
+    height: 60px;
+    background-color: #158;
+    float: right;
+}
+.triangle_right {
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-right: 60px solid #158;
+    border-bottom: 30px solid transparent;
+
+}
+.result-right {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    color: #555;
+    text-align: right;
 }
