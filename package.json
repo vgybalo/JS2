@@ -1,0 +1,12 @@
+{
+  "name": "pass_fs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Server.js",
+  "main": "httpServer.js",
+  "scripts": {
+    "start": "node Server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
